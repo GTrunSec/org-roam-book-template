@@ -1,0 +1,8 @@
+
+rule org2md
+  command = emacs --batch -l publish.el --eval "(gt/publish \"$in\")"
+  description = org2md $in
+
+build content/posts/book.md: org2md org/book.org
+
+build content/posts/ref.md: org2md org/ref.org
