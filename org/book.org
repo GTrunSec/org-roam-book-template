@@ -7,3 +7,22 @@
 :PROPERTIES:
 :ID:       2b352e1a-9b24-4285-b1bd-4a8603dca310
 :END:
+
+* UML
+
+#+begin_src markdown :async :exports both :results output
+{{< kroki type="actdiag" >}}
+{
+  write -> convert -> image
+
+  lane user {
+    label = "User"
+    write [label = "Writing reST"];
+    image [label = "Get diagram IMAGE"];
+  }
+  lane actdiag {
+    convert [label = "Convert reST to Image"];
+  }
+}
+{{< /kroki >}}
+#+end_src

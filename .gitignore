@@ -1,5 +1,6 @@
 # -*- mode: gitignore; -*-
 .hugo*
+build.ninja*
 .cache
 *.log
 .ninja*
