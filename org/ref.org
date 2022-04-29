@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       89a9f249-3f74-4d76-b58b-2f99b3dac602
-:END:
-#+title: Ref
-
-  This is a test with [[id:2b352e1a-9b24-4285-b1bd-4a8603dca310][Titile 1]] node.

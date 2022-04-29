@@ -1,9 +1,0 @@
-# -*- mode: gitignore; -*-
-.hugo*
-.cache
-*.log
-.ninja*
-build.ninjia
-org/.orgid
-content
-public
