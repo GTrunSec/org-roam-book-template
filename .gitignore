@@ -5,6 +5,6 @@ build.ninja*
 *.log
 .ninja*
 build.ninjia
-org/.orgid
+org/.orgids
 content
 public
