@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       efa57acc-20f9-42da-89b7-bd84ebed47bd
+:END:
+#+title: Mind Map
+
+#+begin_src markdown :async :exports both :results output
+{{< kroki type="plantuml" >}}
+@startmindmap
+skinparam monochrome true
++ OS
+++ Ubuntu
++++ Linux Mint
++++ Kubuntu
++++ Lubuntu
++++ KDE Neon
+++ LMDE
+++ SolydXK
+++ SteamOS
+++ Raspbian
+-- Windows 95
+-- Windows 98
+-- Windows NT
+--- Windows 8
+--- Windows 10
+@endmindmap
+{{< /kroki >}}
+#+end_src
