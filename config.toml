@@ -1,4 +1,4 @@
-baseURL = "https://gtrunsec.github.io/org-mode-book-template"
+baseURL = "https://gtrunsec.github.io/org-roam-book-template"
 languageCode = "en-us"
 title = "Org Mode Book Template -> 2022"
 theme = "cortex"
