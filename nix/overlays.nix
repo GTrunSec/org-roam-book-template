@@ -1,5 +1,12 @@
-{inputs}: {
-  default = final: prev: {
+{inputs}: let
+  version = "${builtins.substring 0 8 (inputs.self.shortRev or "dirty")}.${inputs.self.lastModifiedDate or inputs.self.lastModified or "19700101"}";
+in {
+  default = final: prev: rec {
+    org-roam-publish = prev.callPackage ./. {
+      inherit emacs-final version;
+      cortex = inputs.cortex;
+    };
+
     emacs-final = final.emacsWithPackagesFromPackageRequires {
       packageElisp = builtins.readFile ../publish.el;
       package = prev.emacs;

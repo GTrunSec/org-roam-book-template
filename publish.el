@@ -24,30 +24,9 @@
 (require' find-lisp)
 
 
-(setq org-publish-project-alist
-      '(
-        ("org-mode-book-template"
-         :base-directory "./docs"
-         :publishing-function org-md-publish-to-md
-         :publishing-directory "./docs"
-         :base-extension "org"
-         )
-        ))
-
 (with-eval-after-load 'ox
   (require 'ox-hugo)
   (setq org-src-preserve-indentation t))
-
-;; (defun gt/republish ()
-;;   (let ((current-prefix-arg 4)
-;;         (make-backup-files nil)
-;;         (org-export-with-broken-links 1)
-;;         (org-id-locations-file-relative -1)
-;;         ;;(org-id-extra-files (find-lisp-find-files "./braindump" "\.org$"))
-;;         (org-id-locations-file (expand-file-name ".orgids" "./"))
-;;         (org-hugo-base-dir "..")
-;;         )
-;;     ))
 
 (defun gt/publish (file)
   (with-current-buffer (find-file-noselect file)
