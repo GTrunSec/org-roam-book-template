@@ -25,7 +25,7 @@ stdenvNoCC.mkDerivation rec {
   buildPhase = ''
     runHook preBuild
 
-    cp -rT --no-preserve=mode,ownership ${org} org
+    cp -rf --no-preserve=mode,ownership ${org} org
 
     python build.py
 
