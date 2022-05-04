@@ -41,6 +41,16 @@ stdenvNoCC.mkDerivation rec {
     cp -rT --no-preserve=mode,ownership ${cortex} $out/themes/cortex
     cp -rT --no-preserve=mode,ownership content $out/content
 
+    # enable search
+    mkdir $out/content/search
+    cat <<EOF > $out/content/search/_index.md
+    +++
+    title = "Search"
+    type = "search"
+    draft = false
+    +++
+    EOF
+
     runHook postInstall
   '';
 }
