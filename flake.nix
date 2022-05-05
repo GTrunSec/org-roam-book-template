@@ -41,7 +41,7 @@
             ++ aux-packages;
         in {
           packages = {
-            default = pkgs.org-roam-publish;
+            default = pkgs.org-roam-book;
             emacs = pkgs.buildEnv {
               name = "emacs-plus-aux-packages";
               paths = all-packages;
