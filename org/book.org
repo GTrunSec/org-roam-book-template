@@ -3,6 +3,9 @@
 :END:
 #+title: Test
 
+- tags :: [[id:24131c12-beef-41f8-a9fe-fa04e03395e5][C4]]
+
+
 * Titile 1
 :PROPERTIES:
 :ID:       2b352e1a-9b24-4285-b1bd-4a8603dca310
