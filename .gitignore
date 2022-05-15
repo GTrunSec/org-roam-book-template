@@ -8,3 +8,5 @@ build.ninjia
 org/.orgids
 content
 public
+
+template/flake.lock

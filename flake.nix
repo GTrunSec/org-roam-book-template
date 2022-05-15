@@ -53,5 +53,9 @@
     )
     // {
       overlays = import ./nix/overlays.nix {inherit inputs;};
+      templates.default = {
+        description = "make your org-roam-book";
+        path = ./template;
+      };
     };
 }
