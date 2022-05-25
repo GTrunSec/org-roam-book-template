@@ -19,6 +19,10 @@
       owner = "nix-community";
       repo = "emacs-overlay";
     };
+    ox-hugo = {
+      url = "github:kaushalmodi/ox-hugo";
+      flake = false;
+    };
   };
 
   outputs = inputs @ {self, ...}:

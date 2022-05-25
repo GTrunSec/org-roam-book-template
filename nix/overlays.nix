@@ -10,7 +10,7 @@ in {
     emacs-final = final.emacsWithPackagesFromPackageRequires {
       packageElisp = builtins.readFile ../publish.el;
       package = prev.emacs;
-      extraEmacsPackages = import ./packages.nix;
+      extraEmacsPackages = import ./packages.nix {inherit inputs;};
     };
 
     emacsPackagesFor = emacs: (
@@ -19,9 +19,9 @@ in {
           melpaPackages =
             esuper.melpaPackages
             // {
-              # nix-mode = esuper.nix-mode.overrideAttrs (old: {
-              #   src = "${nix-mode}";
-              # });
+              ox-hugo = esuper.ox-hugo.overrideAttrs (old: {
+                src = "${inputs.ox-hugo}";
+              });
             };
           manualPackages =
             esuper.manualPackages

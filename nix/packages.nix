@@ -1,4 +1,7 @@
+{inputs}:
 epkgs:
 with epkgs; [
-  ox-hugo
+  (ox-hugo.overrideAttrs (old: {
+    src = "${inputs.ox-hugo}";
+  }))
 ]
