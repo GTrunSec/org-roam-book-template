@@ -27,6 +27,8 @@ stdenvNoCC.mkDerivation rec {
 
     cp -rf --no-preserve=mode,ownership ${org} org
 
+    mkdir static
+
     python build.py
 
     runHook postBuild
@@ -35,11 +37,12 @@ stdenvNoCC.mkDerivation rec {
   installPhase = ''
     runHook preInstall
 
-    mkdir -p $out/{docs,themes}
+    mkdir -p $out/{docs,themes,static}
 
     cp -rT --no-preserve=mode,ownership layouts $out/layouts
     cp -rT --no-preserve=mode,ownership ${cortex} $out/themes/cortex
     cp -rT --no-preserve=mode,ownership content $out/content
+    cp -rT --no-preserve=mode,ownership static $out/static
 
     # enable search
     mkdir $out/content/search
