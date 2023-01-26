@@ -47,11 +47,11 @@ stdenvNoCC.mkDerivation rec {
     # enable search
     mkdir $out/content/search
     cat <<EOF > $out/content/search/_index.md
-    +++
-    title = "Search"
-    type = "search"
-    draft = false
-    +++
+    ---
+    title: "Search"
+    type: "search"
+    draft: false
+    ---
     EOF
 
     runHook postInstall

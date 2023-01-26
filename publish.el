@@ -32,6 +32,7 @@
   (with-current-buffer (find-file-noselect file)
     (setq org-id-locations-file (expand-file-name ".orgids" "./"))
     (setq org-hugo-base-dir "..")
+    (setq org-hugo-front-matter-format "yaml")
     (let (;;(org-id-extra-files (find-lisp-find-files "~/Dropbox/org-notes/braindump" "\.org$"))
           )
       (org-hugo-export-wim-to-md))))
