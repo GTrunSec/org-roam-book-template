@@ -9,7 +9,7 @@ in {
 
     emacs-final = final.emacsWithPackagesFromPackageRequires {
       packageElisp = builtins.readFile ../publish.el;
-      package = prev.emacs;
+      package = prev.emacs-nox;
       extraEmacsPackages = import ./packages.nix {inherit inputs;};
     };
 
