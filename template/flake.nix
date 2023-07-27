@@ -3,9 +3,6 @@
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-    flake-compat.url = "github:edolstra/flake-compat";
-    flake-compat.flake = false;
-
     org-roam-book-template.url = "github:gtrunsec/org-roam-book-template";
     org-roam-book-template.inputs.nixpkgs.follows = "nixpkgs";
   };

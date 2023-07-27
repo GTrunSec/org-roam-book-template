@@ -8,6 +8,7 @@
   python3,
   cortex,
   org ? ../org,
+  publish ? ../publish.el,
 }:
 stdenvNoCC.mkDerivation rec {
   pname = "publish.el";
@@ -17,7 +18,6 @@ stdenvNoCC.mkDerivation rec {
     include = [
       (nix-filter.inDirectory ../layouts)
       ../build.py
-      ../publish.el
     ];
   };
   buildInputs = [ninja emacs-final python3];
@@ -28,6 +28,8 @@ stdenvNoCC.mkDerivation rec {
     cp -rf --no-preserve=mode,ownership ${org} org
 
     mkdir static
+
+    cp ${publish} publish.el
 
     python build.py
 
