@@ -8,11 +8,8 @@
     nix-filter.url = "github:/numtide/nix-filter";
     nix-filter.inputs.nixpkgs.follows = "nixpkgs";
 
-    cortex.url = "github:gtrunsec/cortex";
+    cortex.url = "github:jethrokuan/cortex";
     cortex.flake = false;
-
-    flake-compat.url = "github:edolstra/flake-compat";
-    flake-compat.flake = false;
 
     emacs-overlay = {
       type = "github";
